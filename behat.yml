@@ -1,0 +1,24 @@
+default:
+    calls:
+        error_reporting: 1638
+    autoload:
+         - %paths.base%/src
+    suites:
+        default:
+            path: %paths.base%/features
+            contexts: [Behat\MinkExtension\Context\MinkContext]
+        bugfix:
+            type: symfony_bundle
+            bundle: 'PrimeNumbersBundle'
+            paths:
+                - '%paths.base%/src/PrimeNumbersBundle/Features'
+            contexts: [PrimeNumbersBundle\Features\Context\PrimesContext]
+
+    extensions:
+        Behat\Symfony2Extension:
+        Behat\MinkExtension:
+            sessions:
+                symfony2:
+                    symfony2: ~
+
+            goutte: ~

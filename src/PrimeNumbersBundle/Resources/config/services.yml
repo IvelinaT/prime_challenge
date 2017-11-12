@@ -1,0 +1,9 @@
+services:
+    prime_numbers.prime_numbers_service:
+        class: PrimeNumbersBundle\Services\PrimeNumbersService
+
+    prime_numbers.prime_numbers_table:
+        class: PrimeNumbersBundle\Services\PrimeNumbersTableService
+        arguments: ["@=service('prime_numbers.prime_numbers_service').getPrimeNumbers()"]
+    prime_numbers_test:
+        class: PrimeNumbersBundle\Services\PrimeNumbersService
