@@ -1,4 +1,16 @@
 prime_challenge
 ===============
 
-A Symfony project created on November 10, 2017, 6:53 am.
+#Usage
+
+```php bin/console prime_challenge:table```
+
+Possible arguments:
+ First number for prime number generator
+ Limit for prime number generator
+
+ Example:
+  To get 6 prime numbers starting from 18 use
+  ```php bin/console prime_challenge:table 18 6```
+
+Please use '--help' for more information.
